@@ -1,0 +1,6 @@
+c:\users\liujin\documents\visual studio 2015\Projects\SocketLearn\SocketLearn\bin\Debug\SocketLearn.exe.config
+c:\users\liujin\documents\visual studio 2015\Projects\SocketLearn\SocketLearn\bin\Debug\SocketLearn.exe
+c:\users\liujin\documents\visual studio 2015\Projects\SocketLearn\SocketLearn\bin\Debug\SocketLearn.pdb
+c:\users\liujin\documents\visual studio 2015\Projects\SocketLearn\SocketLearn\obj\Debug\SocketLearn.csprojResolveAssemblyReference.cache
+c:\users\liujin\documents\visual studio 2015\Projects\SocketLearn\SocketLearn\obj\Debug\SocketLearn.exe
+c:\users\liujin\documents\visual studio 2015\Projects\SocketLearn\SocketLearn\obj\Debug\SocketLearn.pdb
