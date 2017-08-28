@@ -2484,7 +2484,8 @@ Transitions with exit times greater than one will be evaluated only once, so the
     </member>
     <member name="M:UnityEditor.AssetDatabase.GetAssetPathsFromAssetBundleAndAssetName(System.String,System.String)">
       <summary>
-        <para>Get the asset paths from the given assetBundle name and asset name.</para>
+        <para>Get the Asset paths for all Assets tagged with assetBundleName and
+                named assetName.</para>
       </summary>
       <param name="assetBundleName"></param>
       <param name="assetName"></param>
@@ -4499,7 +4500,7 @@ See DecoratorDrawer for an example of how to use this.</para>
     </member>
     <member name="T:UnityEditor.DefaultAsset">
       <summary>
-        <para>DefaultAsset is used for assets that does not have a specific type (yet).</para>
+        <para>DefaultAsset is used for assets that do not have a specific type (yet).</para>
       </summary>
     </member>
     <member name="M:UnityEditor.DefaultAsset.#ctor">
@@ -15040,12 +15041,12 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
     </member>
     <member name="P:UnityEditor.IMGUI.Controls.ArcHandle.angleHandleDrawFunction">
       <summary>
-        <para>An optional Handles.CapFunction to use when displaying the angle control handle. Defaults to a line terminated with Handles.DotHandleCap if no value is specified.</para>
+        <para>An optional Handles.CapFunction to use when displaying the angle control handle. Defaults to a line terminated with Handles.CylinderHandleCap if no value is specified.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.IMGUI.Controls.ArcHandle.angleHandleSizeFunction">
       <summary>
-        <para>An optional Handles.HandleSizeFunction to specify how large the angle control handle should be. Defaults to a fixed screen-space size.</para>
+        <para>An optional Handles.SizeFunction to specify how large the angle control handle should be. Defaults to a fixed screen-space size.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.IMGUI.Controls.ArcHandle.fillColor">
@@ -15065,12 +15066,12 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
     </member>
     <member name="P:UnityEditor.IMGUI.Controls.ArcHandle.radiusHandleDrawFunction">
       <summary>
-        <para>An optional Handles.CapFunction to use when displaying the radius control handle. Defaults to a Handles.ConeHandleCap just outside the arc if no value is specified.</para>
+        <para>An optional Handles.CapFunction to use when displaying the radius control handle. Defaults to a Handles.DotHandleHandleCap along the arc if no value is specified.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.IMGUI.Controls.ArcHandle.radiusHandleSizeFunction">
       <summary>
-        <para>An optional Handles.HandleSizeFunction to specify how large the radius control handle should be. Defaults to a fixed screen-space size.</para>
+        <para>An optional Handles.SizeFunction to specify how large the radius control handle should be. Defaults to a fixed screen-space size.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.IMGUI.Controls.ArcHandle.wireframeColor">
@@ -15082,13 +15083,6 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
       <summary>
         <para>Creates a new instance of the ArcHandle class.</para>
       </summary>
-      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your ArcHandle instances to ensure their control IDs will be independent of the order in which they are drawn.</param>
-    </member>
-    <member name="M:UnityEditor.IMGUI.Controls.ArcHandle.#ctor(System.Int32)">
-      <summary>
-        <para>Creates a new instance of the ArcHandle class.</para>
-      </summary>
-      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your ArcHandle instances to ensure their control IDs will be independent of the order in which they are drawn.</param>
     </member>
     <member name="M:UnityEditor.IMGUI.Controls.ArcHandle.DrawHandle">
       <summary>
@@ -15119,11 +15113,17 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
         <para>Returns or specifies the size of the bounding box.</para>
       </summary>
     </member>
+    <member name="M:UnityEditor.IMGUI.Controls.BoxBoundsHandle.#ctor">
+      <summary>
+        <para>Create a new instance of the BoxBoundsHandle class.</para>
+      </summary>
+      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your BoxBoundsHandle instances.</param>
+    </member>
     <member name="M:UnityEditor.IMGUI.Controls.BoxBoundsHandle.#ctor(System.Int32)">
       <summary>
         <para>Create a new instance of the BoxBoundsHandle class.</para>
       </summary>
-      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your BoxBoundsHandle instances to ensure their control IDs will be independent of the order in which they are drawn.</param>
+      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your BoxBoundsHandle instances.</param>
     </member>
     <member name="M:UnityEditor.IMGUI.Controls.BoxBoundsHandle.DrawWireframe">
       <summary>
@@ -15150,11 +15150,17 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
         <para>Returns or specifies the radius of the capsule bounding volume.</para>
       </summary>
     </member>
+    <member name="M:UnityEditor.IMGUI.Controls.CapsuleBoundsHandle.#ctor">
+      <summary>
+        <para>Create a new instance of the CapsuleBoundsHandle class.</para>
+      </summary>
+      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your CapsuleBoundsHandle instances.</param>
+    </member>
     <member name="M:UnityEditor.IMGUI.Controls.CapsuleBoundsHandle.#ctor(System.Int32)">
       <summary>
         <para>Create a new instance of the CapsuleBoundsHandle class.</para>
       </summary>
-      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your CapsuleBoundsHandle instances to ensure their control IDs will be independent of the order in which they are drawn.</param>
+      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your CapsuleBoundsHandle instances.</param>
     </member>
     <member name="M:UnityEditor.IMGUI.Controls.CapsuleBoundsHandle.DrawWireframe">
       <summary>
@@ -15560,7 +15566,7 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
     </member>
     <member name="P:UnityEditor.IMGUI.Controls.PrimitiveBoundsHandle.midpointHandleSizeFunction">
       <summary>
-        <para>An optional Handles.HandleSizeFunction to specify how large the control handles should be in the space of Handles.matrix. Defaults to a fixed screen-space size.</para>
+        <para>An optional Handles.SizeFunction to specify how large the control handles should be in the space of Handles.matrix. Defaults to a fixed screen-space size.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.IMGUI.Controls.PrimitiveBoundsHandle.wireframeColor">
@@ -15598,11 +15604,17 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
         <para>Z-axis (bit 2).</para>
       </summary>
     </member>
+    <member name="M:UnityEditor.IMGUI.Controls.PrimitiveBoundsHandle.#ctor">
+      <summary>
+        <para>Create a new instance of the PrimitiveBoundsHandle class.</para>
+      </summary>
+      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your PrimitiveBoundsHandle instances.</param>
+    </member>
     <member name="M:UnityEditor.IMGUI.Controls.PrimitiveBoundsHandle.#ctor(System.Int32)">
       <summary>
         <para>Create a new instance of the PrimitiveBoundsHandle class.</para>
       </summary>
-      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your PrimitiveBoundsHandle instances to ensure their control IDs will be independent of the order in which they are drawn.</param>
+      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your PrimitiveBoundsHandle instances.</param>
     </member>
     <member name="M:UnityEditor.IMGUI.Controls.PrimitiveBoundsHandle.DrawHandle">
       <summary>
@@ -15803,11 +15815,17 @@ GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
         <para>Returns or specifies the radius of the capsule bounding volume.</para>
       </summary>
     </member>
+    <member name="M:UnityEditor.IMGUI.Controls.SphereBoundsHandle.#ctor">
+      <summary>
+        <para>Create a new instance of the SphereBoundsHandle class.</para>
+      </summary>
+      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your SphereBoundsHandle instances.</param>
+    </member>
     <member name="M:UnityEditor.IMGUI.Controls.SphereBoundsHandle.#ctor(System.Int32)">
       <summary>
         <para>Create a new instance of the SphereBoundsHandle class.</para>
       </summary>
-      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your SphereBoundsHandle instances to ensure their control IDs will be independent of the order in which they are drawn.</param>
+      <param name="controlIDHint">An integer value used to generate consistent control IDs for each control handle on this instance. Avoid using the same value for all of your SphereBoundsHandle instances.</param>
     </member>
     <member name="M:UnityEditor.IMGUI.Controls.SphereBoundsHandle.DrawWireframe">
       <summary>
@@ -17010,19 +17028,14 @@ GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
         <para>iOS status bar style.</para>
       </summary>
     </member>
-    <member name="F:UnityEditor.iOSStatusBarStyle.BlackOpaque">
-      <summary>
-        <para>Black opaque.</para>
-      </summary>
-    </member>
-    <member name="F:UnityEditor.iOSStatusBarStyle.BlackTranslucent">
-      <summary>
-        <para>Black translucent.</para>
-      </summary>
-    </member>
     <member name="F:UnityEditor.iOSStatusBarStyle.Default">
       <summary>
         <para>Default.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEditor.iOSStatusBarStyle.LightContent">
+      <summary>
+        <para>A light status bar, intended for use on dark backgrounds.</para>
       </summary>
     </member>
     <member name="T:UnityEditor.iOSTargetDevice">
@@ -17610,6 +17623,16 @@ GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
       <param name="prop"></param>
       <param name="label"></param>
       <param name="position"></param>
+    </member>
+    <member name="M:UnityEditor.MaterialEditor.DoubleSidedGIField">
+      <summary>
+        <para>Display UI for editing a material's Double Sided Global Illumination setting.
+Returns true if the UI is indeed displayed i.e. the material supports the Double Sided Global Illumination setting.
++See Also: Material.doubleSidedGI.</para>
+      </summary>
+      <returns>
+        <para>True if the UI is displayed, false otherwise.</para>
+      </returns>
     </member>
     <member name="M:UnityEditor.MaterialEditor.EmissionEnabledProperty">
       <summary>
@@ -18602,7 +18625,7 @@ See Also: MaterialLightmapFlags.</para>
     </member>
     <member name="T:UnityEditor.MenuCommand">
       <summary>
-        <para>Used to extract the context for a MenuItem. MenuCommand objects are passed to custom menu item functions defined using the MenuItem attribute.</para>
+        <para>Used to extract the context for a MenuItem.</para>
       </summary>
     </member>
     <member name="F:UnityEditor.MenuCommand.context">
@@ -19666,6 +19689,11 @@ To force a reload of the mask, simply set  ModelImporterClipAnimation.maskSource
     <member name="P:UnityEditor.Networking.PlayerConnection.EditorConnection.ConnectedPlayers">
       <summary>
         <para>A list of the connected players.</para>
+      </summary>
+    </member>
+    <member name="M:UnityEditor.Networking.PlayerConnection.EditorConnection.DisconnectAll">
+      <summary>
+        <para>This disconnects all of the active connections.</para>
       </summary>
     </member>
     <member name="M:UnityEditor.Networking.PlayerConnection.EditorConnection.Initialize">
@@ -23056,7 +23084,7 @@ For more information - https:msdn.microsoft.comlibrarywindowsappshh779671https:m
     </member>
     <member name="T:UnityEditor.Rendering.PlatformShaderSettings">
       <summary>
-        <para>Used to set up shader settings, per-platorm and per-shader-hardware-tier.</para>
+        <para>Used to set up shader settings, per-platform and per-shader-hardware-tier.</para>
       </summary>
     </member>
     <member name="F:UnityEditor.Rendering.PlatformShaderSettings.cascadedShadowMaps">
@@ -23112,6 +23140,11 @@ For more information - https:msdn.microsoft.comlibrarywindowsappshh779671https:m
     <member name="F:UnityEditor.Rendering.TierSettings.detailNormalMap">
       <summary>
         <para>Allows you to specify whether Detail Normal Map should be sampled if assigned.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEditor.Rendering.TierSettings.enableLPPV">
+      <summary>
+        <para>Allows you to specify whether Light Probe Proxy Volume should be used.</para>
       </summary>
     </member>
     <member name="F:UnityEditor.Rendering.TierSettings.hdr">
