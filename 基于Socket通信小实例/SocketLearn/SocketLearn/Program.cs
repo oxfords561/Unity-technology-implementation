@@ -12,7 +12,7 @@ namespace SocketLearn
     {
         static void Main(string[] args)
         {
-            Server server = new Server("10.16.28.122", 8899);
+            Server server = new Server("127.0.0.1", 8899);
             server.Start();
 
             Console.ReadKey();

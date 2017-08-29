@@ -18,33 +18,31 @@ public class ClientManager : MonoBehaviour{
     private int recieveNum;
     private string recieveStr = "";
     private bool isRecieve = false;
+    private Message msg = new Message();
 
     void Start()
     {
         // 首先声明一个Socket
         clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         //申明IP和端口号
-        IPAddress iPAddress = IPAddress.Parse("10.16.28.122");
+        IPAddress iPAddress = IPAddress.Parse("127.0.0.1");
         IPEndPoint iPEndPoint = new IPEndPoint(iPAddress, 8899);
         //连接服务器端
         clientSocket.Connect(iPEndPoint);
 
         //接收服务端发送过来的消息
         recieveData = new byte[clientSocket.ReceiveBufferSize];
-        clientSocket.BeginReceive(recieveData, 0, clientSocket.ReceiveBufferSize, SocketFlags.None, RevieveCallback, null);
+        clientSocket.BeginReceive(msg.dataBytes, msg.startLenght, msg.restDataLength, SocketFlags.None, RevieveCallback, null);
     }
 
     private void RevieveCallback(IAsyncResult ar)
     {
         int count = clientSocket.EndReceive(ar);
-        string msgRec = Encoding.UTF8.GetString(recieveData, 0, clientSocket.ReceiveBufferSize);
 
         //输出信息
-        isRecieve = true;
-        recieveStr = msgRec;
+        msg.ParseData(count, RecieveMsg);
 
-        recieveData = new byte[clientSocket.ReceiveBufferSize];
-        clientSocket.BeginReceive(recieveData, 0, clientSocket.ReceiveBufferSize, SocketFlags.None, RevieveCallback, null);
+        clientSocket.BeginReceive(msg.dataBytes, msg.startLenght, msg.restDataLength, SocketFlags.None, RevieveCallback, null);
     }
 
     void Update()
@@ -53,14 +51,24 @@ public class ClientManager : MonoBehaviour{
         if (isRecieve)
         {
             isRecieve = false;
-            RecieveMsg(recieveStr);
+            if (!string.IsNullOrEmpty(recieveStr))
+            {
+                HandleRecieveData(recieveStr);
+            }
+
         }
     }
 
     public void RecieveMsg(string data)
     {
+        isRecieve = true;
+        recieveStr = data;
+    }
+
+    private void HandleRecieveData(string data)
+    {
         //当连接服务器第一次的时候会返回当前客户端的flag标记
-        if(recieveNum < 1)
+        if (recieveNum < 1)
         {
             recieveNum++;
 
@@ -88,12 +96,11 @@ public class ClientManager : MonoBehaviour{
             //第一次之后访问服务器则进行数据的接收同步
             playerMove.RecieveData(data);
         }
-        
     }
 
     public void SendMsg(string data)
     {
-        byte[] sendMsg = Encoding.UTF8.GetBytes(data);
+        byte[] sendMsg = msg.PackData(data);
         clientSocket.Send(sendMsg);
     }
 }

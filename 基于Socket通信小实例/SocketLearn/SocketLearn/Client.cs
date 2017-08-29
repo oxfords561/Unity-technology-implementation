@@ -11,6 +11,7 @@ namespace SocketLearn
         private string clientName;
         private byte[] recieveData;
         private Server server;
+        private Message msg = new Message();
         public List<Client> clientList = new List<Client>();
 
         public Client(Socket client,string clientName,Server server)
@@ -23,7 +24,7 @@ namespace SocketLearn
 
         public void Start()
         {
-            clientSocket.BeginReceive(recieveData,0, clientSocket.ReceiveBufferSize,SocketFlags.None, RecieveCallback, null);
+            clientSocket.BeginReceive(msg.dataBytes,msg.startLenght, msg.restDataLength,SocketFlags.None, RecieveCallback, null);
         }
 
         //接收客户端的消息
@@ -42,14 +43,18 @@ namespace SocketLearn
                 }
 
                 //对接收到的数据进行处理
-                string msgRec = Encoding.UTF8.GetString(recieveData, 0, count);
-                HandleResponse(msgRec);
-
-                //输出到控制台
-                Console.WriteLine(msgRec);
+                //string msgRec = Encoding.UTF8.GetString(recieveData, 0, count);
+                msg.ParseData(count);
+                if (!string.IsNullOrEmpty(msg.recieveData))
+                {
+                    HandleResponse(msg.recieveData);
+                    //输出到控制台
+                    Console.WriteLine(msg.recieveData);
+                }
+                    
 
                 //循环接收客户端发送过来的数据
-                clientSocket.BeginReceive(recieveData, 0, clientSocket.ReceiveBufferSize, SocketFlags.None, RecieveCallback, null);
+                clientSocket.BeginReceive(msg.dataBytes,msg.startLenght, msg.restDataLength, SocketFlags.None, RecieveCallback, null);
             }
             catch (Exception)
             {
@@ -88,10 +93,10 @@ namespace SocketLearn
         public void SendMessage(string data)
         {
             Console.WriteLine("发送消息 "+data);
-            byte[] msgData = Encoding.UTF8.GetBytes(data);
             try
             {
-                clientSocket.Send(msgData);
+                clientSocket.Send(msg.PackData(data));
+                Console.WriteLine("发送完打包好的消息 ");
             }
             catch (Exception e)
             {
