@@ -6,7 +6,7 @@ namespace SocketLearn
     public class Message
     {
 
-        public byte[] dataBytes = new byte[1024];
+        public byte[] dataBytes = new byte[8000];
 
         public int restDataLength;
 
@@ -30,7 +30,7 @@ namespace SocketLearn
             return realBytes;
         }
 
-        public void ParseData(int lenght)
+        public void ParseData(int lenght,Action<string> callback)
         {
             startLenght += lenght;
 
@@ -41,10 +41,9 @@ namespace SocketLearn
                 int count = BitConverter.ToInt32(dataBytes, 0);
                 if ((startLenght - count) >= 4)
                 {
-                    byte[] realBytes = new byte[count];
-                    dataBytes.CopyTo(realBytes, 4);
                     startLenght = startLenght - count - 4;
-                    recieveData = Encoding.UTF8.GetString(realBytes);
+
+                    callback(Encoding.UTF8.GetString(dataBytes,4,count));
                 }
                 else
                 {

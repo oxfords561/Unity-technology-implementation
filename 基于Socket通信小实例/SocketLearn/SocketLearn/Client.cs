@@ -9,7 +9,6 @@ namespace SocketLearn
     {
         private Socket clientSocket;
         private string clientName;
-        private byte[] recieveData;
         private Server server;
         private Message msg = new Message();
         public List<Client> clientList = new List<Client>();
@@ -19,7 +18,6 @@ namespace SocketLearn
             this.clientSocket = client;
             this.clientName = clientName;
             this.server = server;
-            recieveData = new byte[clientSocket.ReceiveBufferSize];
         }
 
         public void Start()
@@ -38,33 +36,33 @@ namespace SocketLearn
                 //防止客户端异常退出
                 if (count == 0)
                 {
+                    Console.WriteLine("连接即将关闭1 ");
                     clientSocket.Close();
                     return;
                 }
 
                 //对接收到的数据进行处理
-                //string msgRec = Encoding.UTF8.GetString(recieveData, 0, count);
-                msg.ParseData(count);
-                if (!string.IsNullOrEmpty(msg.recieveData))
-                {
-                    HandleResponse(msg.recieveData);
-                    //输出到控制台
-                    Console.WriteLine(msg.recieveData);
-                }
-                    
-
+                msg.ParseData(count, Callback);
+               
                 //循环接收客户端发送过来的数据
                 clientSocket.BeginReceive(msg.dataBytes,msg.startLenght, msg.restDataLength, SocketFlags.None, RecieveCallback, null);
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 if (clientSocket != null)
                 {
+                    Console.WriteLine("异常信息---"+e.ToString());
                     clientSocket.Close();
                     return;
                 }
             }
             
+        }
+
+        //回调解析的数据
+        public void Callback(string callbackData)
+        {
+            HandleResponse(callbackData);
         }
 
         //对客户端返回过来的数据进行处理
@@ -82,7 +80,6 @@ namespace SocketLearn
             {
                 if (item != this)
                 {
-                    Console.WriteLine("转发消息 "+data);
                     item.SendMessage(data);
                 }
             }
@@ -92,11 +89,9 @@ namespace SocketLearn
         //发送消息给客户端
         public void SendMessage(string data)
         {
-            Console.WriteLine("发送消息 "+data);
             try
             {
                 clientSocket.Send(msg.PackData(data));
-                Console.WriteLine("发送完打包好的消息 ");
             }
             catch (Exception e)
             {

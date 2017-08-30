@@ -31,7 +31,6 @@ public class ClientManager : MonoBehaviour{
         clientSocket.Connect(iPEndPoint);
 
         //接收服务端发送过来的消息
-        recieveData = new byte[clientSocket.ReceiveBufferSize];
         clientSocket.BeginReceive(msg.dataBytes, msg.startLenght, msg.restDataLength, SocketFlags.None, RevieveCallback, null);
     }
 
@@ -79,14 +78,12 @@ public class ClientManager : MonoBehaviour{
             if (int.Parse(data) == 1)
             {
                 playerMove = playerPrefab.GetComponent<PlayerMove>();
-                Destroy(otherPlayerPrefab.GetComponent<PlayerMove>());
                 playerMove.flag = "1";
                 currentPlayer = playerPrefab;
             }
             else
             {
                 playerMove = otherPlayerPrefab.GetComponent<PlayerMove>();
-                Destroy(playerPrefab.GetComponent<PlayerMove>());
                 playerMove.flag = "2";
                 currentPlayer = otherPlayerPrefab;
             }
@@ -101,6 +98,18 @@ public class ClientManager : MonoBehaviour{
     public void SendMsg(string data)
     {
         byte[] sendMsg = msg.PackData(data);
-        clientSocket.Send(sendMsg);
+        try
+        {
+            clientSocket.Send(sendMsg);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("不能发送信息了，连接断了,开始重连");
+            if (clientSocket != null)
+            {
+                clientSocket.Close();
+            }
+        }
+
     }
 }

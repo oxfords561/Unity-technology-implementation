@@ -17,3 +17,10 @@ E:\基于Socket通信小实例\SocketLearn\SocketLearn\obj\Debug\SocketLearn.csp
 E:\基于Socket通信小实例\SocketLearn\SocketLearn\obj\Debug\SocketLearn.csproj.CoreCompileInputs.cache
 E:\基于Socket通信小实例\SocketLearn\SocketLearn\obj\Debug\SocketLearn.exe
 E:\基于Socket通信小实例\SocketLearn\SocketLearn\obj\Debug\SocketLearn.pdb
+D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketLearn\SocketLearn\bin\Debug\SocketLearn.exe.config
+D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketLearn\SocketLearn\bin\Debug\SocketLearn.exe
+D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketLearn\SocketLearn\bin\Debug\SocketLearn.pdb
+D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketLearn\SocketLearn\obj\Debug\SocketLearn.csprojResolveAssemblyReference.cache
+D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketLearn\SocketLearn\obj\Debug\SocketLearn.csproj.CoreCompileInputs.cache
+D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketLearn\SocketLearn\obj\Debug\SocketLearn.exe
+D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketLearn\SocketLearn\obj\Debug\SocketLearn.pdb
