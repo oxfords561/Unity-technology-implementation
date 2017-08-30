@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1288957108749816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -66.043755, y: 2.62, z: 90}
+  m_LocalPosition: {x: -63.448, y: 2.62, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4481797281019324}
@@ -120,7 +120,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cb4c79d6224d1114c9356a938e6d1539, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -180,8 +180,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flag: 
-  movementSpeed: 5
-  turnSpeed: 1000
+  redBulletPrefab: {fileID: 1446971998775158, guid: bb6260ab3f209ab47b7135e54072c7cf,
+    type: 2}
+  greenBulletPrefab: {fileID: 1521455388041024, guid: 0fcdc6e08b510754289f1715cbb36ea5,
+    type: 2}
 --- !u!136 &136940106581382516
 CapsuleCollider:
   m_ObjectHideFlags: 1

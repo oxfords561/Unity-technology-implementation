@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 
+    [HideInInspector]
     public string flag;
+    public GameObject redBulletPrefab;
+    public GameObject greenBulletPrefab;
     private string tempFlag = "";
     private ClientManager clientManager;
     private Rigidbody myRigibody;
     private Vector3 playerInput;
-    [SerializeField]
     private float movementSpeed = 5.0f; 
-    [SerializeField]
     private float turnSpeed = 1000f;
     //同步频率
     private int syncRate = 20;
@@ -21,7 +22,7 @@ public class PlayerMove : MonoBehaviour {
     private Transform currentPlayerTransform;
 
     void Start () {
-        
+
         myRigibody = GetComponent<Rigidbody>();
 
         clientManager = GameObject.Find("ClientManager").GetComponent<ClientManager>();
@@ -78,6 +79,20 @@ public class PlayerMove : MonoBehaviour {
             Debug.Log("tempFlag "+tempFlag);
         }
         
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject bullet;
+            if (clientManager.currentPlayer.name.Equals("Player(Clone)"))
+                bullet = Instantiate<GameObject>(redBulletPrefab, currentPlayerTransform.position, Quaternion.identity);
+            else
+                bullet = Instantiate<GameObject>(greenBulletPrefab, currentPlayerTransform.position, Quaternion.identity);
+
+            bullet.GetComponent<Rigidbody>().AddForce(currentPlayerTransform.forward * 100);
+        }
     }
 
     void FixedUpdate()
