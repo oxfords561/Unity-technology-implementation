@@ -91,6 +91,7 @@ public class ClientManager : MonoBehaviour{
         else
         {
             //第一次之后访问服务器则进行数据的接收同步
+            Debug.Log("接收数据同步");
             playerMove.RecieveData(data);
         }
     }
@@ -104,7 +105,7 @@ public class ClientManager : MonoBehaviour{
         }
         catch (Exception e)
         {
-            Debug.LogError("不能发送信息了，连接断了,开始重连");
+            Debug.LogError("不能发送信息了，连接断了");
             if (clientSocket != null)
             {
                 clientSocket.Close();

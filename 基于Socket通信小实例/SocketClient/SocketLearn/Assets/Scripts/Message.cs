@@ -40,10 +40,7 @@ public class Message {
             int count = BitConverter.ToInt32(dataBytes, 0);
             if ((startLenght - count) >= 4)
             {
-                //byte[] realBytes = new byte[count];
-                //dataBytes.CopyTo(realBytes, 4);
-                //Debug.Log("接收到的数据 " + Encoding.UTF8.GetString(dataBytes,4,count));
-                startLenght = startLenght - count - 4;
+                startLenght = 0;
 
                 callback(Encoding.UTF8.GetString(dataBytes, 4, count));
             }

@@ -36,14 +36,14 @@ namespace SocketLearn
                 //防止客户端异常退出
                 if (count == 0)
                 {
-                    Console.WriteLine("连接即将关闭1 ");
                     clientSocket.Close();
                     return;
                 }
 
                 //对接收到的数据进行处理
                 msg.ParseData(count, Callback);
-               
+
+
                 //循环接收客户端发送过来的数据
                 clientSocket.BeginReceive(msg.dataBytes,msg.startLenght, msg.restDataLength, SocketFlags.None, RecieveCallback, null);
             }
@@ -70,7 +70,7 @@ namespace SocketLearn
         {
            //进行数据解析的判断，如果不包含flag标记的数据不执行之后代码
             if (data.EndsWith("*")) return;
-
+   
             //只有一个客户端的时候不同步信息
             clientList = server.clientList;
             if (clientList.Count < 2) return;
@@ -91,11 +91,12 @@ namespace SocketLearn
         {
             try
             {
-                clientSocket.Send(msg.PackData(data));
+                if(clientSocket != null)
+                    clientSocket.Send(msg.PackData(data));
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Console.WriteLine(e.ToString());
             }
             
         }

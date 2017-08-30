@@ -30,11 +30,12 @@ public class PlayerMove : MonoBehaviour {
 
         //持续间隔对数据的同步
         InvokeRepeating("SyncPlayerTransform", 3f, 1f / syncRate);
+
+        InvokeRepeating("SyncOtherPlayerTransform", 3f, 1f / syncRate);
     }
-	
 
-    void Update () {
-
+    void SyncOtherPlayerTransform()
+    {
         //判断当前客户端控制的对象来同步其他客户端的对象信息
         if (clientManager.currentPlayer.name.Equals("OtherPlayer(Clone)"))
         {
@@ -44,14 +45,14 @@ public class PlayerMove : MonoBehaviour {
         {
             SyncRemoteTransform(GameObject.Find("OtherPlayer(Clone)").transform);
         }
-
-	}
+    }
 
     //同步自身控制对象的位置信息给服务器
     void SyncPlayerTransform()
     {
-        string data = string.Format("{0},{1},{2}*{3}", currentPlayerTransform.localPosition.x,
-            currentPlayerTransform.localPosition.y, currentPlayerTransform.localPosition.z,flag);
+        string data = string.Format("{0},{1},{2}*{3},{4},{5}*{6}", currentPlayerTransform.localPosition.x,
+            currentPlayerTransform.localPosition.y, currentPlayerTransform.localPosition.z,currentPlayerTransform.localEulerAngles.x,
+            currentPlayerTransform.localEulerAngles.y,currentPlayerTransform.localEulerAngles.z, flag);
 
         clientManager.SendMsg(data);
     }
@@ -59,8 +60,9 @@ public class PlayerMove : MonoBehaviour {
     //同步其他客户端的控制对象位置信息
     void SyncRemoteTransform(Transform remotePlayerTransform)
     {
+        if (Vector3.Distance(Vector3.zero, pos) == 0) return;
         remotePlayerTransform.position = pos;
-        //remotePlayerTransform.eulerAngles = rotation;
+        remotePlayerTransform.eulerAngles = rotation;
     }
 
     public void RecieveData(string data)
@@ -70,8 +72,10 @@ public class PlayerMove : MonoBehaviour {
             //获取到其他控制器的数据信息并进行解析
             string[] strs = data.Split('*');
             pos = Parse(strs[0]);
-            //rotation = Parse(strs[1]);
-            tempFlag = strs[1];
+            rotation = Parse(strs[1]);
+            tempFlag = strs[2];
+            Debug.Log("pos "+pos);
+            Debug.Log("tempFlag "+tempFlag);
         }
         
     }

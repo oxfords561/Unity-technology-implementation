@@ -21,11 +21,258 @@ Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket�
 Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
 Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\System.dll (this message is harmless)
 Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.029 seconds
+- Completed reload, in  0.024 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.506984 ms
+UnloadTime: 3.621968 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 526c -> priority: 1 
-  Thread -> id: 152c -> priority: 1 
+  Thread -> id: 45a8 -> priority: 1 
+  Thread -> id: 5064 -> priority: 1 
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) R5 M330 (ID=0x6660)
+    Vendor:   ATI
+    VRAM:     2036 MB
+    Driver:   15.201.1101.0
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\System.dll (this message is harmless)
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.025 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.322664 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 490 -> priority: 1 
+  Thread -> id: 3a08 -> priority: 1 
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-66.0, 52.2, 90.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-66.0, 2.5, 90.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-66.0, 35.2, 87.1)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-70.2, 2.5, 90.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-66.0, 2.5, 82.3)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-70.2, 2.5, 90.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-74.1, 2.5, 90.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-66.0, 2.5, 82.2)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-66.0, 2.5, 77.6)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-74.2, 2.5, 90.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-77.8, 2.5, 90.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-66.0, 2.5, 77.5)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-78.0, 2.5, 90.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-69.1, 2.5, 73.3)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-78.0, 2.5, 90.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-69.1, 2.5, 73.3)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-78.0, 2.5, 90.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收数据同步
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pos (-69.1, 2.5, 73.3)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+tempFlag 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+

@@ -6,13 +6,12 @@ namespace SocketLearn
     public class Message
     {
 
-        public byte[] dataBytes = new byte[8000];
+        public byte[] dataBytes = new byte[1024];
 
         public int restDataLength;
 
         public int startLenght;
 
-        public string recieveData = "";
 
         public Message()
         {
@@ -41,7 +40,7 @@ namespace SocketLearn
                 int count = BitConverter.ToInt32(dataBytes, 0);
                 if ((startLenght - count) >= 4)
                 {
-                    startLenght = startLenght - count - 4;
+                    startLenght = 0;
 
                     callback(Encoding.UTF8.GetString(dataBytes,4,count));
                 }
