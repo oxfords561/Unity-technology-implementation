@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Debug.Log(transform.localPosition);
         Destroy(gameObject,5f);
 	}
 	
