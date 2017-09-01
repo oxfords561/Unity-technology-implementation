@@ -20,6 +20,7 @@ public class PlayerMove : MonoBehaviour {
     private Vector3 pos;
     private Vector3 rotation;
     private Transform currentPlayerTransform;
+    private Transform bulletTransform;
 
     void Start () {
 
@@ -28,6 +29,9 @@ public class PlayerMove : MonoBehaviour {
         clientManager = GameObject.Find("ClientManager").GetComponent<ClientManager>();
 
         currentPlayerTransform = clientManager.currentPlayer.transform;
+
+        if (currentPlayerTransform != null)
+            bulletTransform = currentPlayerTransform.Find("BulletPos");
 
         //持续间隔对数据的同步
         InvokeRepeating("SyncPlayerTransform", 3f, 1f / syncRate);
@@ -87,11 +91,11 @@ public class PlayerMove : MonoBehaviour {
         {
             GameObject bullet;
             if (clientManager.currentPlayer.name.Equals("Player(Clone)"))
-                bullet = Instantiate<GameObject>(redBulletPrefab, currentPlayerTransform.position, Quaternion.identity);
+                bullet = Instantiate<GameObject>(redBulletPrefab, bulletTransform.position, Quaternion.identity);
             else
-                bullet = Instantiate<GameObject>(greenBulletPrefab, currentPlayerTransform.position, Quaternion.identity);
+                bullet = Instantiate<GameObject>(greenBulletPrefab, bulletTransform.position, Quaternion.identity);
 
-            bullet.GetComponent<Rigidbody>().AddForce(currentPlayerTransform.forward * 100);
+            bullet.GetComponent<Rigidbody>().AddForce(bulletTransform.forward * 2000);
         }
     }
 

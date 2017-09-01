@@ -20,7 +20,7 @@ public class ClientManager : MonoBehaviour{
     private bool isRecieve = false;
     private Message msg = new Message();
 
-    void Start()
+    void Awake()
     {
         // 首先声明一个Socket
         clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
