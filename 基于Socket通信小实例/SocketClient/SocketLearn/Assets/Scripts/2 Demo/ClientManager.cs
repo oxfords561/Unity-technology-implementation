@@ -67,7 +67,6 @@ public class ClientManager : MonoBehaviour
 
     private void HandleRecieveData(string data)
     {
-        Debug.Log("接收到服务器的消息 ： "+data);
         //当连接服务器第一次的时候会返回当前客户端的flag标记
         if (recieveNum < 1)
         {

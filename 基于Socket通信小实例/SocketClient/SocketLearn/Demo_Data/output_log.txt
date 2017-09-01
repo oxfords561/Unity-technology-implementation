@@ -21,63 +21,11 @@ Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket�
 Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
 Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\System.dll (this message is harmless)
 Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.046 seconds
+- Completed reload, in  0.035 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.643944 ms
-接收到服务器的消息 ： 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
+UnloadTime: 2.037330 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3518 -> priority: 1 
-  Thread -> id: 4b40 -> priority: 1 
-接收到服务器的消息 ： RedBullet|-63.448,2.5,90.7|0,0,0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-接收到服务器
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-数据是  RedBullet|-63.448,2.5,90.7|0,0,0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-获取子弹同步信息
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-接收到服务器的消息 ： RedBullet|-63.448,2.5,90.7|0,0,0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-接收到服务器
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-数据是  RedBullet|-63.448,2.5,90.7|0,0,0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-获取子弹同步信息
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-接收到服务器的消息 ： RedBullet|-63.448,2.5,90.7|0,0,0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-接收到服务器
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-数据是  RedBullet|-63.448,2.5,90.7|0,0,0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-获取子弹同步信息
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
+  Thread -> id: 1eb4 -> priority: 1 
+  Thread -> id: 1384 -> priority: 1 

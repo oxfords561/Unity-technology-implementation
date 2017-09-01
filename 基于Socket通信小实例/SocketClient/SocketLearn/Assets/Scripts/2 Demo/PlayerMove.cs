@@ -41,27 +41,33 @@ public class PlayerMove : MonoBehaviour
             bulletTransform = currentPlayerTransform.Find("BulletPos");
 
         //持续间隔对数据的同步
-        //InvokeRepeating("SyncPlayerTransform", 3f, 1f / syncRate);
+        InvokeRepeating("SyncPlayerTransform", 3f, 1f / syncRate);
 
-        //InvokeRepeating("SyncOtherPlayerTransform", 3f, 1f / syncRate);
+        InvokeRepeating("SyncOtherPlayerTransform", 3f, 1f / syncRate);
     }
 
     void SyncOtherPlayerTransform()
     {
         //判断当前客户端控制的对象来同步其他客户端的对象信息
-        if (clientManager.currentPlayer.name.Equals("OtherPlayer(Clone)"))
+        if (clientManager.currentPlayer != null && clientManager.currentPlayer.name.Equals("OtherPlayer(Clone)"))
         {
-            SyncRemoteTransform(GameObject.Find("Player(Clone)").transform);
+            GameObject player= GameObject.Find("Player(Clone)");
+            if (player != null)
+                SyncRemoteTransform(player.transform);
         }
         else
         {
-            SyncRemoteTransform(GameObject.Find("OtherPlayer(Clone)").transform);
+            GameObject otherPlayer = GameObject.Find("OtherPlayer(Clone)");
+            if(otherPlayer != null)
+                SyncRemoteTransform(otherPlayer.transform);
         }
     }
 
     //同步自身控制对象的位置信息给服务器
     void SyncPlayerTransform()
     {
+        if (currentPlayerTransform == null) return;
+
         string data = string.Format("{0},{1},{2}*{3},{4},{5}*{6}", currentPlayerTransform.localPosition.x,
             currentPlayerTransform.localPosition.y, currentPlayerTransform.localPosition.z, currentPlayerTransform.localEulerAngles.x,
             currentPlayerTransform.localEulerAngles.y, currentPlayerTransform.localEulerAngles.z, flag);
@@ -81,8 +87,6 @@ public class PlayerMove : MonoBehaviour
     {
         if (clientManager.currentPlayer != this.gameObject) return;
 
-        Debug.Log("接收到服务器");
-        Debug.Log("数据是  "+data);
         //对位置同步消息的接收
         if (!string.IsNullOrEmpty(data) && !data.Equals("") && data.Contains("*"))
         {
@@ -92,10 +96,14 @@ public class PlayerMove : MonoBehaviour
             rotation = UnityTools.ParseVector3(strs[1]);
             tempFlag = strs[2];
         }
-        else //对子弹生成的消息进行接收
+        else if(data.Contains("|"))//对子弹生成的消息进行接收
         {
-            Debug.Log("获取子弹同步信息");
             bulletRequest.HandleResopnse(data);
+        }
+        else//对角色死亡消息进行接收
+        {
+            Debug.Log("接收死亡消息");
+            RemoteDestroyPlayer(data);
         }
 
     }
@@ -112,16 +120,19 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            GameObject bullet;
             if (clientManager.currentPlayer.name.Equals("Player(Clone)"))
             {
-                GameObject.Instantiate<GameObject>(redBulletPrefab,bulletTransform.position,Quaternion.identity);
+                bullet = GameObject.Instantiate<GameObject>(redBulletPrefab,bulletTransform.position,Quaternion.identity);
                 bulletRequest.SendRequest(redBulletPrefab.name, bulletTransform.position, redBulletPrefab.transform.eulerAngles);
             }
             else
             {
-                GameObject.Instantiate<GameObject>(greenBulletPrefab, bulletTransform.position, Quaternion.identity);
+                bullet = GameObject.Instantiate<GameObject>(greenBulletPrefab, bulletTransform.position, Quaternion.identity);
                 bulletRequest.SendRequest(greenBulletPrefab.name, bulletTransform.position, redBulletPrefab.transform.eulerAngles);
             }
+
+            bullet.GetComponent<Rigidbody>().AddForce(bulletTransform.forward * 2000);
         }
     }
 
@@ -163,6 +174,20 @@ public class PlayerMove : MonoBehaviour
         GameObject bullet = GameObject.Instantiate<GameObject>(bulletPrefab);
         bullet.transform.position = position;
         bullet.transform.eulerAngles = rotation;
+
+        bullet.GetComponent<Rigidbody>().AddForce(bulletTransform.forward * 2000);
+    }
+
+    //发送死亡消息
+    public void SendDestroyInfo(string destroyName)
+    {
+        clientManager.SendMsg(destroyName);
+    }
+
+    public void RemoteDestroyPlayer(string playerName)
+    {
+        Debug.Log("更新远程死亡消息");
+        Destroy(GameObject.Find(playerName));
     }
 
 }
