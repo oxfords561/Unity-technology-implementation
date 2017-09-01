@@ -86,10 +86,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\1 SocketDemo\Client.cs" />
     <Compile Include="Assets\Scripts\2 Demo\Bullet.cs" />
+    <Compile Include="Assets\Scripts\2 Demo\BulletRequest.cs" />
     <Compile Include="Assets\Scripts\2 Demo\ClientManager.cs" />
     <Compile Include="Assets\Scripts\2 Demo\Message.cs" />
     <Compile Include="Assets\Scripts\2 Demo\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\Test\Test.cs" />
+    <Compile Include="Assets\Scripts\Tools\UnityTools.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

@@ -74,7 +74,9 @@ namespace SocketLearn
             //只有一个客户端的时候不同步信息
             clientList = server.clientList;
             if (clientList.Count < 2) return;
-           
+
+            //Console.WriteLine("接收到客户端传递过来的消息，现在进行转发");
+
             //将当前客户端传送过来的同步信息转发给其他客户端进行同步
             foreach (Client item in clientList)
             {

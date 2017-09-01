@@ -4,7 +4,8 @@ using System.Net;
 using UnityEngine;
 using System;
 
-public class ClientManager : MonoBehaviour{
+public class ClientManager : MonoBehaviour
+{
 
     [SerializeField]
     private GameObject playerPrefab;
@@ -66,6 +67,7 @@ public class ClientManager : MonoBehaviour{
 
     private void HandleRecieveData(string data)
     {
+        Debug.Log("接收到服务器的消息 ： "+data);
         //当连接服务器第一次的时候会返回当前客户端的flag标记
         if (recieveNum < 1)
         {
@@ -91,7 +93,6 @@ public class ClientManager : MonoBehaviour{
         else
         {
             //第一次之后访问服务器则进行数据的接收同步
-            Debug.Log("接收数据同步");
             playerMove.RecieveData(data);
         }
     }
@@ -105,7 +106,6 @@ public class ClientManager : MonoBehaviour{
         }
         catch (Exception e)
         {
-            Debug.LogError("不能发送信息了，连接断了");
             if (clientSocket != null)
             {
                 clientSocket.Close();

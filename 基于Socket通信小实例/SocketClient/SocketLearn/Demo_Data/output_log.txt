@@ -1,0 +1,83 @@
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) R5 M330 (ID=0x6660)
+    Vendor:   ATI
+    VRAM:     2036 MB
+    Driver:   15.201.1101.0
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\System.dll (this message is harmless)
+Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.046 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.643944 ms
+接收到服务器的消息 ： 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 3518 -> priority: 1 
+  Thread -> id: 4b40 -> priority: 1 
+接收到服务器的消息 ： RedBullet|-63.448,2.5,90.7|0,0,0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收到服务器
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+数据是  RedBullet|-63.448,2.5,90.7|0,0,0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+获取子弹同步信息
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收到服务器的消息 ： RedBullet|-63.448,2.5,90.7|0,0,0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收到服务器
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+数据是  RedBullet|-63.448,2.5,90.7|0,0,0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+获取子弹同步信息
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收到服务器的消息 ： RedBullet|-63.448,2.5,90.7|0,0,0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收到服务器
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+数据是  RedBullet|-63.448,2.5,90.7|0,0,0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+获取子弹同步信息
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+

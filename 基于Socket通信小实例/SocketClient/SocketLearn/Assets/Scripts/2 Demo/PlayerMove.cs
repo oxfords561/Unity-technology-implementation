@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour {
+public class PlayerMove : MonoBehaviour
+{
 
     [HideInInspector]
     public string flag;
+    private BulletRequest bulletRequest;
     public GameObject redBulletPrefab;
     public GameObject greenBulletPrefab;
     private string tempFlag = "";
     private ClientManager clientManager;
     private Rigidbody myRigibody;
     private Vector3 playerInput;
-    private float movementSpeed = 5.0f; 
+    private float movementSpeed = 5.0f;
     private float turnSpeed = 1000f;
     //同步频率
     private int syncRate = 20;
@@ -22,11 +24,16 @@ public class PlayerMove : MonoBehaviour {
     private Transform currentPlayerTransform;
     private Transform bulletTransform;
 
-    void Start () {
+    void Start()
+    {
 
         myRigibody = GetComponent<Rigidbody>();
 
         clientManager = GameObject.Find("ClientManager").GetComponent<ClientManager>();
+
+        bulletRequest = GetComponent<BulletRequest>();
+
+        bulletRequest.SetClientManager(clientManager);
 
         currentPlayerTransform = clientManager.currentPlayer.transform;
 
@@ -34,9 +41,9 @@ public class PlayerMove : MonoBehaviour {
             bulletTransform = currentPlayerTransform.Find("BulletPos");
 
         //持续间隔对数据的同步
-        InvokeRepeating("SyncPlayerTransform", 3f, 1f / syncRate);
+        //InvokeRepeating("SyncPlayerTransform", 3f, 1f / syncRate);
 
-        InvokeRepeating("SyncOtherPlayerTransform", 3f, 1f / syncRate);
+        //InvokeRepeating("SyncOtherPlayerTransform", 3f, 1f / syncRate);
     }
 
     void SyncOtherPlayerTransform()
@@ -56,8 +63,8 @@ public class PlayerMove : MonoBehaviour {
     void SyncPlayerTransform()
     {
         string data = string.Format("{0},{1},{2}*{3},{4},{5}*{6}", currentPlayerTransform.localPosition.x,
-            currentPlayerTransform.localPosition.y, currentPlayerTransform.localPosition.z,currentPlayerTransform.localEulerAngles.x,
-            currentPlayerTransform.localEulerAngles.y,currentPlayerTransform.localEulerAngles.z, flag);
+            currentPlayerTransform.localPosition.y, currentPlayerTransform.localPosition.z, currentPlayerTransform.localEulerAngles.x,
+            currentPlayerTransform.localEulerAngles.y, currentPlayerTransform.localEulerAngles.z, flag);
 
         clientManager.SendMsg(data);
     }
@@ -72,30 +79,49 @@ public class PlayerMove : MonoBehaviour {
 
     public void RecieveData(string data)
     {
-     
-        if (!string.IsNullOrEmpty(data)&& !data.Equals("")){
+        if (clientManager.currentPlayer != this.gameObject) return;
+
+        Debug.Log("接收到服务器");
+        Debug.Log("数据是  "+data);
+        //对位置同步消息的接收
+        if (!string.IsNullOrEmpty(data) && !data.Equals("") && data.Contains("*"))
+        {
             //获取到其他控制器的数据信息并进行解析
             string[] strs = data.Split('*');
-            pos = Parse(strs[0]);
-            rotation = Parse(strs[1]);
+            pos = UnityTools.ParseVector3(strs[0]);
+            rotation = UnityTools.ParseVector3(strs[1]);
             tempFlag = strs[2];
-            Debug.Log("pos "+pos);
-            Debug.Log("tempFlag "+tempFlag);
         }
-        
+        else //对子弹生成的消息进行接收
+        {
+            Debug.Log("获取子弹同步信息");
+            bulletRequest.HandleResopnse(data);
+        }
+
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GameObject bullet;
-            if (clientManager.currentPlayer.name.Equals("Player(Clone)"))
-                bullet = Instantiate<GameObject>(redBulletPrefab, bulletTransform.position, Quaternion.identity);
-            else
-                bullet = Instantiate<GameObject>(greenBulletPrefab, bulletTransform.position, Quaternion.identity);
+        //开始发射子弹
+        Shoot();
+    }
 
-            bullet.GetComponent<Rigidbody>().AddForce(bulletTransform.forward * 2000);
+    void Shoot()
+    {
+        if (clientManager.currentPlayer != this.gameObject) return;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (clientManager.currentPlayer.name.Equals("Player(Clone)"))
+            {
+                GameObject.Instantiate<GameObject>(redBulletPrefab,bulletTransform.position,Quaternion.identity);
+                bulletRequest.SendRequest(redBulletPrefab.name, bulletTransform.position, redBulletPrefab.transform.eulerAngles);
+            }
+            else
+            {
+                GameObject.Instantiate<GameObject>(greenBulletPrefab, bulletTransform.position, Quaternion.identity);
+                bulletRequest.SendRequest(greenBulletPrefab.name, bulletTransform.position, redBulletPrefab.transform.eulerAngles);
+            }
         }
     }
 
@@ -106,7 +132,7 @@ public class PlayerMove : MonoBehaviour {
         {
             return;
         }
-            
+
         //设置 坐标的值
         playerInput.Set(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
 
@@ -117,7 +143,7 @@ public class PlayerMove : MonoBehaviour {
         //创建一个可以朝向运动的方向
         Quaternion newRotation = Quaternion.LookRotation(playerInput);
 
-        
+
         //如果当前物体并没有朝向运动方向则将当前物体转向运动方向
         if (myRigibody.rotation != newRotation)
             myRigibody.rotation = Quaternion.RotateTowards(myRigibody.rotation, newRotation, turnSpeed * Time.deltaTime);
@@ -130,14 +156,13 @@ public class PlayerMove : MonoBehaviour {
         myRigibody.MovePosition(newPosition);
     }
 
-    //对字符串数据进行解析
-     Vector3 Parse(string data)
+    //同步远程客户端创建子弹
+    public void RemoteCreateBullet(string bulletName,Vector3 position,Vector3 rotation)
     {
-        string[] strs = data.Split(',');
-        float x = float.Parse(strs[0]);
-        float y = float.Parse(strs[1]);
-        float z = float.Parse(strs[2]);
-
-        return new Vector3(x,y,z);
+        GameObject bulletPrefab = Resources.Load<GameObject>(bulletName);
+        GameObject bullet = GameObject.Instantiate<GameObject>(bulletPrefab);
+        bullet.transform.position = position;
+        bullet.transform.eulerAngles = rotation;
     }
+
 }
