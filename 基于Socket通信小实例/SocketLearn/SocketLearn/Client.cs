@@ -82,6 +82,7 @@ namespace SocketLearn
             {
                 if (item != this)
                 {
+                    Console.WriteLine("转发的消息 " + data);
                     item.SendMessage(data);
                 }
             }

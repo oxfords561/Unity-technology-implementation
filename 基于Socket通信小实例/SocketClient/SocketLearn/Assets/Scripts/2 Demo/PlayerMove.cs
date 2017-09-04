@@ -87,9 +87,11 @@ public class PlayerMove : MonoBehaviour
     {
         if (clientManager.currentPlayer != this.gameObject) return;
 
+        
         //对位置同步消息的接收
-        if (!string.IsNullOrEmpty(data) && !data.Equals("") && data.Contains("*"))
+        if (data.Contains("*"))
         {
+            Debug.Log("接收位置同步消息");
             //获取到其他控制器的数据信息并进行解析
             string[] strs = data.Split('*');
             pos = UnityTools.ParseVector3(strs[0]);
@@ -98,9 +100,10 @@ public class PlayerMove : MonoBehaviour
         }
         else if(data.Contains("|"))//对子弹生成的消息进行接收
         {
+            Debug.Log("接收子弹生成消息");
             bulletRequest.HandleResopnse(data);
         }
-        else//对角色死亡消息进行接收
+        else if(data.Contains("Player"))//对角色死亡消息进行接收
         {
             Debug.Log("接收死亡消息");
             RemoteDestroyPlayer(data);
@@ -181,6 +184,7 @@ public class PlayerMove : MonoBehaviour
     //发送死亡消息
     public void SendDestroyInfo(string destroyName)
     {
+        Debug.Log("发送死亡消息");
         clientManager.SendMsg(destroyName);
     }
 

@@ -21,11 +21,19 @@ Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket�
 Loading D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
 Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\System.dll (this message is harmless)
 Platform assembly: D:\Github项目\Unity-technology-implementation\基于Socket通信小实例\SocketClient\SocketLearn\Demo_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.035 seconds
+- Completed reload, in  0.041 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.037330 ms
+UnloadTime: 1.740797 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1eb4 -> priority: 1 
-  Thread -> id: 1384 -> priority: 1 
+  Thread -> id: 2ea0 -> priority: 1 
+  Thread -> id: 11e8 -> priority: 1 
+接收到的消息是 -63.448,2.5,90*0,270,0*1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+接收位置同步消息
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
