@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{4B603621-753E-21EA-77FD-E5CE2E38C489}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_0;UNITY_5_6;UNITY_5;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\AutoSelect\MultiLayerTouch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\AutoSelect\MultiLayerUI.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\MultiCamera\MultiCameraTouch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\MultiCamera\MultiCameraUI.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\GameExemple\RTSExample\CubeSelect.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\GameExemple\RTSExample\RTSCamera.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\GameExemple\RunBall\Ball.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\GameExemple\RunBall\BallRunPlayer.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\GameExemple\RunBall\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\LoadExamples.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\MultiFinger\FingerTouch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\MultiFinger\MutliFingersScreenTouch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\DoubleTapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\DragMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\LongTapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\Swipe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\TapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\TouchMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\PinchMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TooglePickMethodUI.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwistMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoDoubleTapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoDragMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoLongTapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoSwipe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoTapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoTouchMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UICompatibility\ETWindow.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UICompatibility\GlobalEasyTouchEvent.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UICompatibility\UICompatibility.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UICompatibility\UIWindow.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UITwistPinch\UIDrag.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UITwistPinch\UIPinch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UITwistPinch\UITwist.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\5.X new features\Script\RTS_NewSyntaxe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\5.X new features\Script\SimpleActionExample.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\EasyTouchTrigger.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickBase.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickDrag.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickEnterOverExist.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickLongTap.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickPinch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickSwipe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTap.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTouch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTwist.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\BaseFinger.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\ECamera.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouchInput.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\Finger.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\Gesture.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\TwoFingerGesture.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Component\ETCSetDirectActionTransform.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\Button-Event-Input\ButtonInputUI.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\Button-Event-Input\ButtonUIEvent.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\ControlEventInput\ControlUIEvent.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\ControlEventInput\ControlUIInput.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\DPadClassicalTime\DPadParameterUI.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\FPSExample\FPSPlayerControl.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\FPSExample\ImpactEffect.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\JoystickParameter\AxisXUi.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\LoadLevelScript.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\TouchPad-Event-Input\TouchPadUIEvent.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 2.X_New Features\Script\CharacterAnimation.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 2.X_New Features\Script\CharacterAnimationDungeon.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\_Medias\SliderText.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ComponentExtensions.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCArea.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCAxis.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCBase.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCButton.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCDPad.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCInput.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCJoystick.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCTouchPad.cs" />
+     <Compile Include="Assets\Scripts\Audio\AudioBase.cs" />
+     <Compile Include="Assets\Scripts\Audio\AudioEvent.cs" />
+     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\Audio\MainAudioCtrl.cs" />
+     <Compile Include="Assets\Scripts\Character\AnimCtrl.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterBase.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterEvent.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterManager.cs" />
+     <Compile Include="Assets\Scripts\Character\PlayerCtrl.cs" />
+     <Compile Include="Assets\Scripts\Framework\AreaCode.cs" />
+     <Compile Include="Assets\Scripts\Framework\ManagerBase.cs" />
+     <Compile Include="Assets\Scripts\Framework\MonoBase.cs" />
+     <Compile Include="Assets\Scripts\Framework\MsgCenter.cs" />
+     <Compile Include="Assets\Scripts\UI\JoystickCtrl.cs" />
+     <Compile Include="Assets\Scripts\UI\Test2Panel.cs" />
+     <Compile Include="Assets\Scripts\UI\TestPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\UIBase.cs" />
+     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
+     <None Include="Assets\EasyTouchBundle\EasyTouchControls\ReleaseNotes.txt" />
+     <None Include="Assets\EasyTouchBundle\EasyTouchControls\Documentation\Version 2.0.txt" />
+     <None Include="Assets\EasyTouchBundle\EasyTouch\_Documentation\How to migrate from EasyTouch 4.X.txt" />
+     <None Include="Assets\EasyTouchBundle\Readme.txt" />
+     <None Include="Assets\EasyTouchBundle\EasyTouchControls\Issues in button behavior (MAC).txt" />
+     <None Include="Assets\EasyTouchBundle\EasyTouch\RealseNotes.txt" />
+     <None Include="Assets\EasyTouchBundle\EasyTouch\How to migrate from EasyTouch 4.X.txt" />
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
