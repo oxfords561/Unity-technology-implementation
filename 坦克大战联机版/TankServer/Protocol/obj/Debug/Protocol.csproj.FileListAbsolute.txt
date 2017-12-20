@@ -1,0 +1,6 @@
+C:\Users\LiuJin\Documents\TankServer\Protocol\bin\Debug\Protocol.dll
+C:\Users\LiuJin\Documents\TankServer\Protocol\bin\Debug\Protocol.pdb
+C:\Users\LiuJin\Documents\TankServer\Protocol\obj\Debug\Protocol.csproj.CoreCompileInputs.cache
+C:\Users\LiuJin\Documents\TankServer\Protocol\obj\Debug\Protocol.dll
+C:\Users\LiuJin\Documents\TankServer\Protocol\obj\Debug\Protocol.pdb
+C:\Users\LiuJin\Documents\TankServer\Protocol\obj\Debug\Protocol.csprojResolveAssemblyReference.cache

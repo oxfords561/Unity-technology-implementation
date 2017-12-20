@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TankGame", "TankGame.csproj", "{4F4B0DD0-173B-0BEA-357D-158FDF3C1BEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TankGame.Editor", "TankGame.Editor.csproj", "{ECF8EC4C-E2CD-236B-B393-C223AC710CD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F4B0DD0-173B-0BEA-357D-158FDF3C1BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F4B0DD0-173B-0BEA-357D-158FDF3C1BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F4B0DD0-173B-0BEA-357D-158FDF3C1BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F4B0DD0-173B-0BEA-357D-158FDF3C1BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF8EC4C-E2CD-236B-B393-C223AC710CD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF8EC4C-E2CD-236B-B393-C223AC710CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF8EC4C-E2CD-236B-B393-C223AC710CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF8EC4C-E2CD-236B-B393-C223AC710CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+**************************************
+CHANGELOG
+**************************************
+v1.2.1
+- PUN: fixed not connecting to 'Best Region' automatically
+- PUN: fixed missing Unity Ads namespace in GameManager
+- changed rate app url for iTunes and added a warning for default
+
+v1.2
+- added support for Photon Unity Networking (PUN)
+- minimum Unity version: 5.5.0
+
+v1.1
+- added menu item in settings for the desired network mode (online/LAN/offline)
+- added AI bots with player detection when playing in network mode 'offline'
+- added support for automatic LAN discovery, host & join in network mode 'LAN'
+  (when playing in a LAN on desktop Windows/Mac the firewall needs to be disabled)
+- added aim indicator on mobile devices that better visualizes the turret direction
+- changed cursor in editor and standalone builds to a crosshair style cursor
+- fixed shooting imprecision on desktop when playing in a non-square aspect ratio
+- fixed turret jittering where server could overwrite local turret rotation
+
+v1.0.1
+- submitted using clean project to fix falsely detected activation of Unity services
+- added API compatibility for Unity 5.5
+
+v1.0
+- initial version.

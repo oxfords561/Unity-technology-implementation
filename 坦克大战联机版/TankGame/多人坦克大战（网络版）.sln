@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "多人坦克大战（网络版）", "多人坦克大战（网络版）.csproj", "{13B1D5A4-68FE-668D-52DC-73EC15C56E26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "多人坦克大战（网络版）.Editor", "多人坦克大战（网络版）.Editor.csproj", "{A9869531-DE76-A0E5-852D-C29994D39B48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13B1D5A4-68FE-668D-52DC-73EC15C56E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13B1D5A4-68FE-668D-52DC-73EC15C56E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13B1D5A4-68FE-668D-52DC-73EC15C56E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13B1D5A4-68FE-668D-52DC-73EC15C56E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9869531-DE76-A0E5-852D-C29994D39B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9869531-DE76-A0E5-852D-C29994D39B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9869531-DE76-A0E5-852D-C29994D39B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9869531-DE76-A0E5-852D-C29994D39B48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

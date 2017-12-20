@@ -1,0 +1,12 @@
+C:\Users\LiuJin\Documents\TankServer\TankServer\obj\Debug\TankServer.csproj.CoreCompileInputs.cache
+C:\Users\LiuJin\Documents\TankServer\TankServer\bin\Debug\TankServer.exe.config
+C:\Users\LiuJin\Documents\TankServer\TankServer\bin\Debug\TankServer.exe
+C:\Users\LiuJin\Documents\TankServer\TankServer\bin\Debug\TankServer.pdb
+C:\Users\LiuJin\Documents\TankServer\TankServer\bin\Debug\AhpilyServer.dll
+C:\Users\LiuJin\Documents\TankServer\TankServer\bin\Debug\MySql.Data.dll
+C:\Users\LiuJin\Documents\TankServer\TankServer\bin\Debug\Protocol.dll
+C:\Users\LiuJin\Documents\TankServer\TankServer\bin\Debug\MySql.Data.xml
+C:\Users\LiuJin\Documents\TankServer\TankServer\bin\Debug\Protocol.pdb
+C:\Users\LiuJin\Documents\TankServer\TankServer\obj\Debug\TankServer.exe
+C:\Users\LiuJin\Documents\TankServer\TankServer\obj\Debug\TankServer.pdb
+C:\Users\LiuJin\Documents\TankServer\TankServer\obj\Debug\TankServer.csprojResolveAssemblyReference.cache

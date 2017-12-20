@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TankServer", "TankServer\TankServer.csproj", "{1408F918-47E9-418A-9CFE-CB07E4F1E15E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protocol", "Protocol\Protocol.csproj", "{275469A8-B28B-44BC-809E-F226F9292AAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1408F918-47E9-418A-9CFE-CB07E4F1E15E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1408F918-47E9-418A-9CFE-CB07E4F1E15E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1408F918-47E9-418A-9CFE-CB07E4F1E15E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1408F918-47E9-418A-9CFE-CB07E4F1E15E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{275469A8-B28B-44BC-809E-F226F9292AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{275469A8-B28B-44BC-809E-F226F9292AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{275469A8-B28B-44BC-809E-F226F9292AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{275469A8-B28B-44BC-809E-F226F9292AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CB7E66B-BD3B-403E-923A-9A79F2B3CE9C}
+	EndGlobalSection
+EndGlobal
