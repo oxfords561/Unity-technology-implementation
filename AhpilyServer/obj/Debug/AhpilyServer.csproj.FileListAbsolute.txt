@@ -1,0 +1,13 @@
+C:\Users\Ahpily\Desktop\GameServer\AhpilyServer\bin\Debug\AhpilyServer.dll
+C:\Users\Ahpily\Desktop\GameServer\AhpilyServer\bin\Debug\AhpilyServer.pdb
+C:\Users\Ahpily\Desktop\GameServer\AhpilyServer\obj\Debug\AhpilyServer.dll
+C:\Users\Ahpily\Desktop\GameServer\AhpilyServer\obj\Debug\AhpilyServer.pdb
+C:\Users\Ahpily\Desktop\GameServer\AhpilyServer\obj\Debug\AhpilyServer.csprojResolveAssemblyReference.cache
+E:\Unity\Unity视频教程\多人网络斗地主\素材\GameServer（8-14）\GameServer\AhpilyServer\bin\Debug\AhpilyServer.dll
+E:\Unity\Unity视频教程\多人网络斗地主\素材\GameServer（8-14）\GameServer\AhpilyServer\bin\Debug\AhpilyServer.pdb
+E:\Unity\Unity视频教程\多人网络斗地主\素材\GameServer（8-14）\GameServer\AhpilyServer\obj\Debug\AhpilyServer.csproj.CoreCompileInputs.cache
+E:\Unity\Unity视频教程\多人网络斗地主\素材\GameServer（8-14）\GameServer\AhpilyServer\obj\Debug\AhpilyServer.dll
+E:\Unity\Unity视频教程\多人网络斗地主\素材\GameServer（8-14）\GameServer\AhpilyServer\obj\Debug\AhpilyServer.pdb
+E:\Unity\Unity视频教程\多人网络斗地主\素材\GameServer（8-14）\GameServer\AhpilyServer\bin\Debug\MySql.Data.dll
+E:\Unity\Unity视频教程\多人网络斗地主\素材\GameServer（8-14）\GameServer\AhpilyServer\bin\Debug\MySql.Data.xml
+E:\Unity\Unity视频教程\多人网络斗地主\素材\GameServer（8-14）\GameServer\AhpilyServer\obj\Debug\AhpilyServer.csprojResolveAssemblyReference.cache
