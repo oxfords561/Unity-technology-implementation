@@ -1,0 +1,27 @@
+     主角   刺客
+     
+
+      
+Idle_Normal	休息待机	0-60
+XiuXian         休闲动作        61-115
+Idle_Fight	战斗待机	118-163
+Hurt          	受伤		165-187
+
+Revive  	起身		190-236
+
+Victory		胜利		1030-1120
+Die		死亡		239-311
+HurtXuanYun	眩晕		314-344
+HurtBingDong	冰冻		  168
+Skill1		技能1		433-468   
+Skill2		技能2		471-507
+Skill3		技能3		510-555
+Skill4		技能4		602-640
+Skill5		技能5		710-794
+Skill6		技能6		797-846
+PhyAttack1	物理攻击子招式1	849-862
+PhyAttack2	物理攻击子招式2	884-902
+PhyAttack3	物理攻击子招式3	903-936
+Run		跑步	 	347-367
+
+Open            选角动画        950-1013

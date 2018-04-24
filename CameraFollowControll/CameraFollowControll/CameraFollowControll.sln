@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{1108EA3A-952D-1917-0D97-2C5D0CE9B57F}") = "CameraFollowControll", "Assembly-CSharp-firstpass.csproj", "{82395D10-F7AD-EE82-69AD-554795E51871}"
+EndProject
+Project("{1108EA3A-952D-1917-0D97-2C5D0CE9B57F}") = "CameraFollowControll", "Assembly-CSharp.csproj", "{383A2D7C-64FB-EDF6-54B7-428589562EC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82395D10-F7AD-EE82-69AD-554795E51871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82395D10-F7AD-EE82-69AD-554795E51871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82395D10-F7AD-EE82-69AD-554795E51871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82395D10-F7AD-EE82-69AD-554795E51871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{383A2D7C-64FB-EDF6-54B7-428589562EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383A2D7C-64FB-EDF6-54B7-428589562EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383A2D7C-64FB-EDF6-54B7-428589562EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383A2D7C-64FB-EDF6-54B7-428589562EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
